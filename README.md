@@ -1,66 +1,73 @@
-# Todo List API
+# MEAN Stack Todo List Application
 
-A RESTful API for managing a to-do list with user authentication, built with Node.js, Express, and MongoDB.
+A robust, full-stack Task Management application built with the **MEAN stack** (MongoDB, Express.js, Angular, Node.js). This project features a secure RESTful API backend and a responsive, modern Angular frontend.
 
-## Features
+## 🚀 Features
 
-- User Authentication (Register, Login)
-- JWT-based Authorization
-- CRUD Operations for Todos
-- Pagination, Filtering, and Sorting of Todos
-- Rate Limiting and Security Headers
-- Unit/Integration Tests
+-   **Full-Stack Architecture**: Clean separation of concerns with a dedicated `backend` API and `frontend` client.
+-   **Secure Authentication**: robust user registration and login using **JWT (JSON Web Tokens)** and **bcrypt** for password hashing.
+-   **CRUD Operations**: Create, Read, Update, and Delete todos seamlessly.
+-   **Modern UI**: Built with **Angular** and styled for a premium user experience (dark mode, glassmorphism).
+-   **Security Best Practices**:
+    -   Data validation
+    -   Rate limiting
+    -   Helmet for HTTP headers
+    -   CORS configuration
 
-## Installation
+## 🛠️ Tech Stack
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create a `.env` file in the root directory with the following variables:
-   ```env
-   PORT=5000
-   MONGO_URI=mongodb://localhost:27017/todo_list_api
-   JWT_SECRET=your_jwt_secret
-   JWT_EXPIRE=30d
-   ```
+### Backend
+-   **Node.js** & **Express.js**
+-   **MongoDB** & **Mongoose** (Data modeling)
+-   **jsonwebtoken** (Authentication)
+-   **bcryptjs** (Security)
 
-## Usage
+### Frontend
+-   **Angular** (Framework)
+-   **RxJS** (Reactive programming)
+-   **TypeScript**
 
-### Run Development Server
+## 📦 Project Structure
+
 ```bash
-npm run dev
+TODO-LIST-API/
+├── backend/    # Node.js/Express API
+└── frontend/   # Angular Application
 ```
 
-### Run Production Server
-```bash
-npm start
-```
+## 🏁 Getting Started
 
-### Run Tests
-```bash
-npm test
-```
+### Prerequisites
+-   Node.js (v18+ recommended)
+-   MongoDB (Local or Atlas URI)
+-   Angular CLI
 
-## API Endpoints
+### Installation
 
-### Auth
-- `POST /register`: Register a new user
-- `POST /login`: Login user and get token
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/todo-list-api.git
+    cd todo-list-api
+    ```
 
-### Todos
-- `GET /todos`: Get all todos (Logged in user only)
-  - Query Params: `page`, `limit`, `title`, `sort`
-- `POST /todos`: Create a new todo
-- `PUT /todos/:id`: Update a todo
-- `DELETE /todos/:id`: Delete a todo
+2.  **Setup Backend**
+    ```bash
+    cd backend
+    npm install
+    # Create a .env file with:
+    # PORT=5000
+    # MONGO_URI=your_mongodb_connection_string
+    # JWT_SECRET=your_jwt_secret
+    npm run dev
+    ```
 
-## Technologies
+3.  **Setup Frontend**
+    ```bash
+    cd ../frontend
+    npm install
+    npm start
+    ```
 
-- Node.js
-- Express
-- MongoDB (Mongoose)
-- JWT (JSON Web Tokens)
-- Bcrypt.js
-- Jest & Supertest
+## 📝 License
+
+This project is licensed under the ISC License.
