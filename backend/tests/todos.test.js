@@ -7,7 +7,7 @@ const Todo = require('../models/Todo');
 let token;
 
 beforeAll(async () => {
-    await mongoose.connect(process.env.MONGO_URI + '_test'); // Use test DB
+    await mongoose.connect('mongodb+srv://boobalanvdevstudies_db_user:MwFWaZVFiEQBtGOA@cluster0.ss2ozc1.mongodb.net/?appName=Cluster0'); // Use test DB
 });
 
 afterAll(async () => {

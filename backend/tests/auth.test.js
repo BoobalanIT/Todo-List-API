@@ -8,7 +8,7 @@ beforeAll(async () => {
     // If the app checks for connection before listening, we might need to handle it.
     // For now assuming we can connect to a test DB.
     // Ideally we should use a separate test DB.
-    await mongoose.connect(process.env.MONGO_URI + '_test');
+    await mongoose.connect('mongodb+srv://boobalanvdevstudies_db_user:MwFWaZVFiEQBtGOA@cluster0.ss2ozc1.mongodb.net/?appName=Cluster0');
 });
 
 afterAll(async () => {
