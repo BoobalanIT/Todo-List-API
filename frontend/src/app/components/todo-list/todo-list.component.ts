@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
@@ -34,7 +34,8 @@ export class TodoListComponent implements OnInit {
 
     constructor(
         private todoService: TodoService,
-        public authService: AuthService
+        public authService: AuthService,
+        private cdr: ChangeDetectorRef
     ) { }
 
     ngOnInit(): void {
@@ -46,6 +47,7 @@ export class TodoListComponent implements OnInit {
             next: (res: TodoResponse) => {
                 this.todos = res.data;
                 this.total = res.total;
+                this.cdr.detectChanges();
             },
             error: () => {
                 this.showToast('Failed to load todos', 'error');
