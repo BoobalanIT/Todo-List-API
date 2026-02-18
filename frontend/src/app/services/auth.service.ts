@@ -11,7 +11,7 @@ export interface AuthResponse {
     providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = '/api';
+    private apiUrl = 'https://todo-list-api-tt9t.onrender.com/api/';
     private tokenKey = 'todo_token';
     private loggedIn = new BehaviorSubject<boolean>(this.hasToken());
 
