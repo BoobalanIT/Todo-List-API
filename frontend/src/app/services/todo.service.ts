@@ -21,7 +21,7 @@ export interface TodoResponse {
     providedIn: 'root'
 })
 export class TodoService {
-    private apiUrl = '/api/todos';
+    private apiUrl = 'https://todo-list-api-tt9t.onrender.com/api/todos';
 
     constructor(private http: HttpClient) { }
 
