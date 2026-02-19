@@ -16,6 +16,7 @@ exports.register = async (req, res, next) => {
 
         sendTokenResponse(user, 200, res);
     } catch (err) {
+        console.error(err);
         if (err.code === 11000) {
             return res.status(400).json({ message: 'Email already exists' });
         }
@@ -56,6 +57,7 @@ exports.login = async (req, res, next) => {
 
         sendTokenResponse(user, 200, res);
     } catch (err) {
+        console.error(err);
         res.status(500).json({ message: 'Server Error' });
     }
 };

@@ -68,6 +68,13 @@ TODO-LIST-API/
     npm start
     ```
 
+3.  **To Publish**
+    ```bash
+    cd frontend
+    ng build --base-href "https://BoobalanIT.github.io/Todo-List-API/"
+    npx angular-cli-ghpages --dir=dist/frontend/browser
+    ```
+
 ## 📝 License
 
 This project is licensed under the ISC License.
